@@ -17,6 +17,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { Card, Button } from '@/components';
 import { colors, typography, spacing, borderRadius } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface Session {
   id: string;
@@ -29,6 +31,7 @@ interface Session {
 type ModalType = 'password' | '2fa' | 'biometric' | 'download' | 'delete' | null;
 
 export default function SecurityScreen() {
+  const { colors: themeColors, isDark } = useTheme();
   // Security Settings State
   const [biometricEnabled, setBiometricEnabled] = useState(true);
   const [twoFactorEnabled, setTwoFactorEnabled] = useState(false);
@@ -835,16 +838,16 @@ export default function SecurityScreen() {
   );
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="dark" />
+    <View style={[styles.container, { backgroundColor: themeColors.background.secondary }]}>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
 
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { backgroundColor: themeColors.neutral[0], borderBottomColor: themeColors.border.light }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Security & Privacy</Text>
-        <View style={{ width: 40 }} />
+        <ThemeToggle color={themeColors.text.primary} />
       </View>
 
       <ScrollView

@@ -7,6 +7,8 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { registerSchema, RegisterInput } from '@/utils/validation-schemas';
 import { supabase } from "@/services/supabase";
 import { useCRMTracker } from "@/hooks/useCRMTracker";
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function RegisterScreen() {
   const { control, handleSubmit: rhfHandleSubmit, formState: { errors }, setError: setFormError } = useForm<RegisterInput>({
@@ -15,6 +17,7 @@ export default function RegisterScreen() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const { trackEvent, trackButtonClick, trackError } = useCRMTracker();
+  const { colors: themeColors, isDark } = useTheme();
 
   const handleRegister = async (formData: RegisterInput) => {
     setIsLoading(true);
@@ -45,14 +48,17 @@ export default function RegisterScreen() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: themeColors.background.primary }]}>
       <ScrollView contentContainerStyle={styles.scrollContent}>
-        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-          <Ionicons name="arrow-back" size={24} color="#1E3A5F" />
-        </TouchableOpacity>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+          <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+            <Ionicons name="arrow-back" size={24} color={themeColors.text.primary} />
+          </TouchableOpacity>
+          <ThemeToggle color={themeColors.text.primary} />
+        </View>
 
-        <Text style={styles.title}>Create Account</Text>
-        <Text style={styles.subtitle}>Join Sports Media Charter for seamless travel</Text>
+        <Text style={[styles.title, { color: themeColors.text.primary }]}>Create Account</Text>
+        <Text style={[styles.subtitle, { color: themeColors.text.secondary }]}>Join Sports Media Charter for seamless travel</Text>
 
         {errors.root?.message ? (
           <View style={styles.errorBox}>

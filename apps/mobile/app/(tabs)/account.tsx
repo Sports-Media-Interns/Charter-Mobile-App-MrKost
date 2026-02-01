@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '@/providers/ThemeProvider';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { colors, typography, spacing, borderRadius, shadows } from '@/theme';
 
 type IconName = keyof typeof Ionicons.glyphMap;
@@ -53,8 +54,13 @@ export default function AccountScreen() {
   return (
     <View style={[styles.container, { backgroundColor: themeColors.background.primary }]}>
       <View style={[styles.header, { backgroundColor: themeColors.primary[500], paddingTop: insets.top + spacing[2] }]}>
-        <Text style={styles.headerTitle}>Account</Text>
-        <Text style={styles.headerSubtitle}>Settings & Preferences</Text>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <View>
+            <Text style={styles.headerTitle}>Account</Text>
+            <Text style={styles.headerSubtitle}>Settings & Preferences</Text>
+          </View>
+          <ThemeToggle />
+        </View>
       </View>
 
       <ScrollView contentContainerStyle={styles.content}>

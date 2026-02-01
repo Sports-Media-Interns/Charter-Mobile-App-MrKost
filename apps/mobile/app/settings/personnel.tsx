@@ -15,6 +15,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { Button, Input, Card, Badge } from '@/components';
 import { colors, typography, spacing, borderRadius } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface Person {
   id: string;
@@ -28,6 +30,7 @@ interface Person {
 }
 
 export default function PersonnelScreen() {
+  const { colors: themeColors, isDark } = useTheme();
   const [personnel, setPersonnel] = useState<Person[]>([
     { id: '1', name: 'Mark Cuban', title: 'Owner', email: 'mark@mavericks.com', phone: '+1 (555) 111-2222', canApprove: true, canBook: true, canViewReports: true },
     { id: '2', name: 'Jason Kidd', title: 'Head Coach', email: 'jkidd@mavericks.com', phone: '+1 (555) 222-3333', canApprove: true, canBook: false, canViewReports: true },
@@ -117,18 +120,16 @@ export default function PersonnelScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="dark" />
+    <View style={[styles.container, { backgroundColor: themeColors.background.secondary }]}>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
 
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { backgroundColor: themeColors.neutral[0], borderBottomColor: themeColors.border.light }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Authorized Personnel</Text>
-        <TouchableOpacity onPress={openAddModal} style={styles.addBtn}>
-          <Ionicons name="add" size={24} color={colors.primary[500]} />
-        </TouchableOpacity>
+        <ThemeToggle color={themeColors.text.primary} />
       </View>
 
       <ScrollView

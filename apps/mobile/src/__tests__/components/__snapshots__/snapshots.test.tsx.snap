@@ -1,0 +1,606 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Snapshots Badge renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#e5e5e5",
+        "borderRadius": 9999,
+        "flexDirection": "row",
+        "paddingHorizontal": 12,
+        "paddingVertical": 6,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#404040",
+        "fontSize": 14,
+        "fontWeight": "500",
+      }
+    }
+  >
+    New
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Badge with color renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#e5e5e5",
+        "borderRadius": 9999,
+        "flexDirection": "row",
+        "paddingHorizontal": 12,
+        "paddingVertical": 6,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#404040",
+        "fontSize": 14,
+        "fontWeight": "500",
+      }
+    }
+  >
+    Active
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Button disabled renders correctly 1`] = `
+<View
+  accessibilityLabel="Disabled"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": false,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#1E3A5F",
+      "borderRadius": 12,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "center",
+      "opacity": 0.5,
+      "paddingHorizontal": 24,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#fff",
+          "fontSize": 16,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Disabled
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Component Snapshots Button loading renders correctly 1`] = `
+<View
+  accessibilityLabel="Loading"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": true,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#1E3A5F",
+      "borderRadius": 12,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "center",
+      "opacity": 0.5,
+      "paddingHorizontal": 24,
+      "width": "100%",
+    }
+  }
+>
+  <ActivityIndicator
+    color="#fff"
+    size="small"
+  />
+</View>
+`;
+
+exports[`Component Snapshots Button renders correctly 1`] = `
+<View
+  accessibilityLabel="Press Me"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": false,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#1E3A5F",
+      "borderRadius": 12,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 24,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#fff",
+          "fontSize": 16,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Press Me
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Component Snapshots Button variant=outline renders correctly 1`] = `
+<View
+  accessibilityLabel="Outline"
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": false,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "borderColor": "#1E3A5F",
+      "borderRadius": 12,
+      "borderWidth": 2,
+      "flexDirection": "row",
+      "height": 48,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 24,
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#1E3A5F",
+          "fontSize": 16,
+          "fontWeight": "600",
+        }
+      }
+    >
+      Outline
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Component Snapshots EmptyState renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "paddingHorizontal": 32,
+        "paddingVertical": undefined,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f5f5f5",
+        "borderRadius": 40,
+        "height": 80,
+        "justifyContent": "center",
+        "marginBottom": 16,
+        "width": 80,
+      }
+    }
+  >
+    <Ionicons
+      color="#a3a3a3"
+      name="airplane-outline"
+      size={40}
+    />
+  </View>
+  <Text
+    style={
+      {
+        "color": "#171717",
+        "fontSize": 18,
+        "fontWeight": "600",
+        "textAlign": "center",
+      }
+    }
+  >
+    No flights
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots EmptyState with action renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "paddingHorizontal": 32,
+        "paddingVertical": undefined,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#f5f5f5",
+        "borderRadius": 40,
+        "height": 80,
+        "justifyContent": "center",
+        "marginBottom": 16,
+        "width": 80,
+      }
+    }
+  >
+    <Ionicons
+      color="#a3a3a3"
+      name="add-circle-outline"
+      size={40}
+    />
+  </View>
+  <Text
+    style={
+      {
+        "color": "#171717",
+        "fontSize": 18,
+        "fontWeight": "600",
+        "textAlign": "center",
+      }
+    }
+  >
+    No requests
+  </Text>
+  <View
+    style={
+      {
+        "marginTop": 24,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="New Request"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": false,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#1E3A5F",
+          "borderRadius": 12,
+          "flexDirection": "row",
+          "height": 48,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingHorizontal": 24,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Ionicons
+          color="#fff"
+          name="add-circle-outline"
+          size={20}
+          style={
+            {
+              "marginRight": 8,
+            }
+          }
+        />
+        <Text
+          style={
+            {
+              "color": "#fff",
+              "fontSize": 16,
+              "fontWeight": "600",
+            }
+          }
+        >
+          New Request
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Component Snapshots LoadingSpinner large renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingVertical": 32,
+      },
+      undefined,
+    ]
+  }
+>
+  <ActivityIndicator
+    color="#1E3A5F"
+    size="large"
+  />
+</View>
+`;
+
+exports[`Component Snapshots LoadingSpinner renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingVertical": 32,
+      },
+      undefined,
+    ]
+  }
+>
+  <ActivityIndicator
+    color="#1E3A5F"
+    size="large"
+  />
+</View>
+`;
+
+exports[`Component Snapshots LoadingSpinner with message renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingVertical": 32,
+      },
+      undefined,
+    ]
+  }
+>
+  <ActivityIndicator
+    color="#1E3A5F"
+    size="large"
+  />
+  <Text
+    style={
+      {
+        "color": "#737373",
+        "fontSize": 14,
+        "marginTop": 16,
+      }
+    }
+  >
+    Loading data...
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots StatusBadge renders correctly 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#DBEAFE",
+        "borderRadius": 9999,
+        "flexDirection": "row",
+        "paddingHorizontal": 12,
+        "paddingVertical": 6,
+      },
+      undefined,
+    ]
+  }
+>
+  <Ionicons
+    color="#1D4ED8"
+    name="paper-plane-outline"
+    size={14}
+    style={
+      {
+        "marginRight": 4,
+      }
+    }
+  />
+  <Text
+    style={
+      {
+        "color": "#1D4ED8",
+        "fontSize": 14,
+        "fontWeight": "500",
+      }
+    }
+  >
+    Submitted
+  </Text>
+</View>
+`;

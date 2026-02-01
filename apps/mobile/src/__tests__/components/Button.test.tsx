@@ -12,7 +12,7 @@ describe('Button', () => {
     const { getByText } = renderWithTheme(
       <Button title="Submit" onPress={() => {}} />,
     );
-    expect(getByText('Submit')).toBeTruthy();
+    expect(getByText('Submit')).toBeOnTheScreen();
   });
 
   it('calls onPress when pressed', () => {
@@ -44,6 +44,6 @@ describe('Button', () => {
     const { getByRole } = renderWithTheme(
       <Button title="Accessible" onPress={() => {}} />,
     );
-    expect(getByRole('button')).toBeTruthy();
+    expect(getByRole('button')).toBeOnTheScreen();
   });
 });

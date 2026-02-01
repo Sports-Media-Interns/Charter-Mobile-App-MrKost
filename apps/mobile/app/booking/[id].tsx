@@ -5,10 +5,13 @@ import { Ionicons } from "@expo/vector-icons";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/services/supabase";
 import { useCRMTracker } from "@/hooks/useCRMTracker";
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function BookingDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const { trackEvent } = useCRMTracker();
+  const { isDark } = useTheme();
 
   const { data: booking } = useQuery({
     queryKey: ["booking", id],
@@ -104,6 +107,12 @@ export default function BookingDetailScreen() {
       <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
         {/* Confirmation Header */}
         <View className="bg-primary-500 px-6 py-8">
+          <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+            <TouchableOpacity onPress={() => router.back()}>
+              <Ionicons name="arrow-back" size={24} color="#FFFFFF" />
+            </TouchableOpacity>
+            <ThemeToggle />
+          </View>
           <View className="flex-row justify-between items-start">
             <View>
               <Text className="text-primary-100 text-sm">Confirmation Number</Text>

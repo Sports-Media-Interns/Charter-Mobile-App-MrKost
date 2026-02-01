@@ -18,6 +18,8 @@ import { supabase } from '@/services/supabase';
 import { useAuthStore } from '@/store';
 import { Button, Input } from '@/components';
 import { colors, typography, spacing, borderRadius } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 type FormErrors = {
   email?: string;
@@ -31,6 +33,7 @@ export default function LoginScreen() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isLoading, setIsLoading] = useState(false);
   const insets = useSafeAreaInsets();
+  const { isDark } = useTheme();
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
@@ -88,6 +91,9 @@ export default function LoginScreen() {
           showsVerticalScrollIndicator={false}
         >
           {/* Logo and Branding */}
+          <View style={{ alignSelf: 'flex-end' }}>
+            <ThemeToggle />
+          </View>
           <View style={styles.brandingSection}>
             <View style={styles.logoContainer}>
               <Image

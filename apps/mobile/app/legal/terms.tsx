@@ -10,6 +10,8 @@ import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { colors, typography, spacing, borderRadius } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const EFFECTIVE_DATE = 'January 1, 2026';
 const COMPANY_NAME = 'Sports Media, Inc.';
@@ -20,6 +22,7 @@ const SUPPORT_PHONE = '+1 (970) 436-0580';
 const ADDRESS = '274 Mount Harvard Ave, Suite 900, Severance, CO 80550';
 
 export default function TermsScreen() {
+  const { colors: themeColors, isDark } = useTheme();
   const [expandedSections, setExpandedSections] = useState<string[]>(['intro']);
 
   const toggleSection = (section: string) => {
@@ -55,16 +58,16 @@ export default function TermsScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="dark" />
+    <View style={[styles.container, { backgroundColor: themeColors.background.secondary }]}>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
 
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { backgroundColor: themeColors.neutral[0], borderBottomColor: themeColors.border.light }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Terms of Service</Text>
-        <View style={{ width: 40 }} />
+        <ThemeToggle color={themeColors.text.primary} />
       </View>
 
       <ScrollView

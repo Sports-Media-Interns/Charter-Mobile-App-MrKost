@@ -15,7 +15,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { supabase } from '@/services/supabase';
-import { Card, FlightCard, Button, EmptyState } from '@/components';
+import { Card, FlightCard, Button, EmptyState, ThemeToggle } from '@/components';
 import { colors as staticColors, typography, spacing, borderRadius, shadows } from '@/theme';
 import { useTheme } from '@/hooks/useTheme';
 
@@ -38,7 +38,7 @@ interface RecentActivity {
 export default function HomeScreen() {
   const [refreshing, setRefreshing] = useState(false);
   const [userName, setUserName] = useState('');
-  const { colors, isDark, toggle } = useTheme();
+  const { colors, isDark } = useTheme();
   const [showSearch, setShowSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const { width } = useWindowDimensions();
@@ -241,18 +241,7 @@ export default function HomeScreen() {
                 <Ionicons name="notifications-outline" size={22} color="#FFFFFF" />
                 <View style={styles.notificationBadge} />
               </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.headerBtn}
-                onPress={toggle}
-                accessibilityLabel="Toggle dark mode"
-                accessibilityRole="button"
-              >
-                <Ionicons
-                  name={isDark ? 'sunny-outline' : 'moon-outline'}
-                  size={22}
-                  color="#FFFFFF"
-                />
-              </TouchableOpacity>
+              <ThemeToggle />
             </View>
           </View>
 

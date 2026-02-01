@@ -165,9 +165,5 @@ export function CRMProvider({ children }: CRMProviderProps) {
 }
 
 export function useCRM(): CRMContextValue {
-  const context = useContext(CRMContext);
-  if (!context) {
-    throw new Error('useCRM must be used within a CRMProvider');
-  }
-  return context;
+  return useContext(CRMContext);
 }

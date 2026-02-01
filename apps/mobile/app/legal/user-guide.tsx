@@ -10,12 +10,15 @@ import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { colors, typography, spacing, borderRadius } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const APP_NAME = 'Sports Media Charter';
 const SUPPORT_EMAIL = 'charter@sportsmedia.net';
 const SUPPORT_PHONE = '+1 (970) 436-0580';
 
 export default function UserGuideScreen() {
+  const { colors: themeColors, isDark } = useTheme();
   const [expandedSections, setExpandedSections] = useState<string[]>(['getting-started']);
 
   const toggleSection = (section: string) => {
@@ -54,16 +57,16 @@ export default function UserGuideScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="dark" />
+    <View style={[styles.container, { backgroundColor: themeColors.background.secondary }]}>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
 
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { backgroundColor: themeColors.neutral[0], borderBottomColor: themeColors.border.light }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>User Guide</Text>
-        <View style={{ width: 40 }} />
+        <ThemeToggle color={themeColors.text.primary} />
       </View>
 
       <ScrollView

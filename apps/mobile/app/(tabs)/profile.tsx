@@ -17,7 +17,7 @@ import { StatusBar } from 'expo-status-bar';
 import * as ImagePicker from 'expo-image-picker';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { supabase } from '@/services/supabase';
-import { Card, Button, Badge } from '@/components';
+import { Card, Button, Badge, ThemeToggle } from '@/components';
 import { colors as staticColors, typography, spacing, borderRadius, shadows } from '@/theme';
 import { useCRMTracker } from '@/hooks/useCRMTracker';
 import { useTheme } from '@/hooks/useTheme';
@@ -129,7 +129,7 @@ export default function ProfileScreen() {
   const [showAvatarModal, setShowAvatarModal] = useState(false);
   const [uploadingAvatar, setUploadingAvatar] = useState(false);
   const { trackEvent, trackButtonClick } = useCRMTracker();
-  const { colors, isDark, toggle } = useTheme();
+  const { colors } = useTheme();
   const insets = useSafeAreaInsets();
 
   // Track profile viewed on mount
@@ -245,18 +245,7 @@ export default function ProfileScreen() {
         <View style={[styles.header, { backgroundColor: colors.primary[500], paddingTop: insets.top + spacing[4] }]}>
           <Text style={styles.headerTitle}>Profile</Text>
           <View style={{ flexDirection: 'row', gap: spacing[2] }}>
-            <TouchableOpacity
-              style={styles.settingsBtn}
-              onPress={toggle}
-              accessibilityLabel="Toggle dark mode"
-              accessibilityRole="button"
-            >
-              <Ionicons
-                name={isDark ? 'sunny-outline' : 'moon-outline'}
-                size={24}
-                color="#FFFFFF"
-              />
-            </TouchableOpacity>
+            <ThemeToggle size={24} />
             <TouchableOpacity
               style={styles.settingsBtn}
               onPress={() => router.push('/settings/security')}

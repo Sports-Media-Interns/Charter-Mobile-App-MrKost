@@ -3,12 +3,15 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet, Platform } from "r
 import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { supabase } from "@/services/supabase";
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function ForgotPasswordScreen() {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [error, setError] = useState("");
+  const { colors: themeColors, isDark } = useTheme();
 
   const handleReset = async () => {
     if (!email) {
@@ -32,11 +35,11 @@ export default function ForgotPasswordScreen() {
 
   if (emailSent) {
     return (
-      <View style={styles.successContainer}>
+      <View style={[styles.successContainer, { backgroundColor: themeColors.background.primary }]}>
         <View style={styles.successIcon}>
           <Ionicons name="mail" size={40} color="#FFFFFF" />
         </View>
-        <Text style={styles.successTitle}>Check Your Email</Text>
+        <Text style={[styles.successTitle, { color: themeColors.text.primary }]}>Check Your Email</Text>
         <Text style={styles.successText}>
           We've sent password reset instructions to your email address.
         </Text>
@@ -48,13 +51,16 @@ export default function ForgotPasswordScreen() {
   }
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
-        <Ionicons name="arrow-back" size={24} color="#1E3A5F" />
-      </TouchableOpacity>
+    <View style={[styles.container, { backgroundColor: themeColors.background.primary }]}>
+      <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+        <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+          <Ionicons name="arrow-back" size={24} color={themeColors.text.primary} />
+        </TouchableOpacity>
+        <ThemeToggle color={themeColors.text.primary} />
+      </View>
 
-      <Text style={styles.title}>Reset Password</Text>
-      <Text style={styles.subtitle}>Enter your email and we'll send you reset instructions</Text>
+      <Text style={[styles.title, { color: themeColors.text.primary }]}>Reset Password</Text>
+      <Text style={[styles.subtitle, { color: themeColors.text.secondary }]}>Enter your email and we'll send you reset instructions</Text>
 
       {error ? (
         <View style={styles.errorBox}>

@@ -3,6 +3,7 @@ import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useTheme } from '@/providers/ThemeProvider';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { useNotifications, useMarkNotificationsRead } from '@/hooks/useNotifications';
 import { LoadingSpinner, EmptyState } from '@/components';
 import { typography, spacing } from '@/theme';
@@ -74,6 +75,7 @@ export default function NotificationsScreen() {
         >
           Notifications
         </Text>
+        <ThemeToggle color={colors.text.primary} />
       </View>
 
       <FlatList

@@ -11,6 +11,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { Card, Button, Badge } from '@/components';
 import { colors, typography, spacing, borderRadius, shadows } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 interface PaymentMethod {
   id: string;
@@ -30,6 +32,7 @@ interface Invoice {
 }
 
 export default function BillingScreen() {
+  const { colors: themeColors, isDark } = useTheme();
   const [paymentMethods] = useState<PaymentMethod[]>([
     { id: '1', type: 'card', name: 'Visa', last4: '4242', expiry: '12/26', isDefault: true },
     { id: '2', type: 'card', name: 'Amex', last4: '1234', expiry: '06/25', isDefault: false },
@@ -65,16 +68,16 @@ export default function BillingScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="dark" />
+    <View style={[styles.container, { backgroundColor: themeColors.background.secondary }]}>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
 
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { backgroundColor: themeColors.neutral[0], borderBottomColor: themeColors.border.light }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
           <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Billing & Payments</Text>
-        <View style={{ width: 40 }} />
+        <ThemeToggle color={themeColors.text.primary} />
       </View>
 
       <ScrollView

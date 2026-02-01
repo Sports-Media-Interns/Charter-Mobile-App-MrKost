@@ -13,6 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { StatusBar } from 'expo-status-bar';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Button, Card, AirportSearch } from '@/components';
+import { ThemeToggle } from '@/components/ThemeToggle';
 import { Airport } from '@/data/airports';
 import { colors as staticColors, typography, spacing, borderRadius, shadows } from '@/theme';
 import { useCRMTracker, useCRMFormTracker } from '@/hooks/useCRMTracker';
@@ -162,7 +163,7 @@ export default function NewRequestScreen() {
           <Ionicons name="close" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <Text style={[styles.headerTitle, { color: colors.text.primary }]}>New Charter Request</Text>
-        <View style={{ width: 40 }} />
+        <ThemeToggle color={colors.text.primary} />
       </View>
 
       <ScrollView

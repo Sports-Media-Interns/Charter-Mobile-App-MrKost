@@ -2,14 +2,20 @@ import { View, Text, ScrollView, TouchableOpacity, StyleSheet } from "react-nati
 import { router } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
 import { useTheme } from "@/hooks/useTheme";
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function RequestsScreen() {
   const { colors } = useTheme();
   return (
     <View style={[styles.container, { backgroundColor: colors.background.secondary }]}>
       <View style={[styles.header, { backgroundColor: colors.background.primary, borderBottomColor: colors.border.light }]}>
-        <Text style={[styles.title, { color: colors.text.primary }]}>Requests</Text>
-        <Text style={[styles.subtitle, { color: colors.text.secondary }]}>Manage your charter requests</Text>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+          <View>
+            <Text style={[styles.title, { color: colors.text.primary }]}>Requests</Text>
+            <Text style={[styles.subtitle, { color: colors.text.secondary }]}>Manage your charter requests</Text>
+          </View>
+          <ThemeToggle color={colors.text.primary} />
+        </View>
       </View>
       <ScrollView style={styles.content} contentContainerStyle={{ paddingBottom: 100 }}>
         <View style={styles.emptyState}>

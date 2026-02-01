@@ -19,6 +19,8 @@ import { StatusBar } from 'expo-status-bar';
 import * as ImagePicker from 'expo-image-picker';
 import { Card, Button, Badge } from '@/components';
 import { colors, typography, spacing, borderRadius, shadows } from '@/theme';
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 // ============================================================================
 // TYPES
@@ -202,6 +204,7 @@ const mockUsers: User[] = [
 // ============================================================================
 
 export default function AdminScreen() {
+  const { colors: themeColors, isDark } = useTheme();
   const [users, setUsers] = useState<User[]>(mockUsers);
   const [activeModal, setActiveModal] = useState<ModalType>(null);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
@@ -382,21 +385,19 @@ export default function AdminScreen() {
   // ============================================================================
 
   return (
-    <View style={styles.container}>
-      <StatusBar style="light" />
+    <View style={[styles.container, { backgroundColor: themeColors.background.secondary }]}>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
 
       {/* Header */}
-      <View style={styles.header}>
+      <View style={[styles.header, { backgroundColor: themeColors.neutral[0], borderBottomColor: themeColors.border.light }]}>
         <TouchableOpacity onPress={() => router.back()} style={styles.headerBtn}>
-          <Ionicons name="arrow-back" size={24} color={colors.neutral[0]} />
+          <Ionicons name="arrow-back" size={24} color={colors.text.primary} />
         </TouchableOpacity>
         <View style={styles.headerCenter}>
           <Text style={styles.headerTitle}>User Management</Text>
           <Text style={styles.headerSubtitle}>Dallas Mavericks</Text>
         </View>
-        <TouchableOpacity style={styles.headerBtn} onPress={() => { resetForm(); setActiveModal('add'); }}>
-          <Ionicons name="person-add" size={22} color={colors.neutral[0]} />
-        </TouchableOpacity>
+        <ThemeToggle color={themeColors.text.primary} />
       </View>
 
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>

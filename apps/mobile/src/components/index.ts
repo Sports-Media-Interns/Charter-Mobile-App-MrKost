@@ -10,6 +10,9 @@ export { ErrorBoundary } from './ErrorBoundary';
 export { FlightCard } from './FlightCard';
 export { AirportSearch } from './AirportSearch';
 
+// Theme
+export { ThemeToggle } from './ThemeToggle';
+
 // Utility Components
 export { EmptyState } from './EmptyState';
 export { LoadingSpinner, SkeletonLoader } from './LoadingSpinner';

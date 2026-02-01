@@ -1,9 +1,15 @@
 import { View, Text, TouchableOpacity, Image, StyleSheet } from "react-native";
 import { Link } from "expo-router";
+import { useTheme } from '@/hooks/useTheme';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 export default function Index() {
+  const { isDark } = useTheme();
   return (
     <View style={styles.container}>
+      <View style={{ position: 'absolute', top: 50, right: 20 }}>
+        <ThemeToggle />
+      </View>
       <Image
         source={require('../assets/images/sports-media-logo.png')}
         style={styles.logo}
