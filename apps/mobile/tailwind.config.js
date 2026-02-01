@@ -1,0 +1,55 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{js,jsx,ts,tsx}", "./src/**/*.{js,jsx,ts,tsx}"],
+  presets: [require("nativewind/preset")],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: "#E8F0F8",
+          100: "#C5D9ED",
+          200: "#9FBFE0",
+          300: "#79A5D3",
+          400: "#5C91C9",
+          500: "#1E3A5F",
+          600: "#1A3354",
+          700: "#152B47",
+          800: "#10223A",
+          900: "#0B1A2D",
+        },
+        accent: {
+          50: "#FFF8E6",
+          100: "#FFEFC0",
+          200: "#FFE599",
+          300: "#FFDB73",
+          400: "#FFD14D",
+          500: "#D4A84B",
+          600: "#B8923F",
+          700: "#9C7C33",
+          800: "#806627",
+          900: "#64501B",
+        },
+        success: "#22C55E",
+        warning: "#F59E0B",
+        error: "#EF4444",
+        neutral: {
+          50: "#F9FAFB",
+          100: "#F3F4F6",
+          200: "#E5E7EB",
+          300: "#D1D5DB",
+          400: "#9CA3AF",
+          500: "#6B7280",
+          600: "#4B5563",
+          700: "#374151",
+          800: "#1F2937",
+          900: "#111827",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Inter", "system-ui", "sans-serif"],
+      },
+    },
+  },
+  plugins: [],
+};

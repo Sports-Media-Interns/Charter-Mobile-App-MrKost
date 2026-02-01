@@ -1,0 +1,50 @@
+{
+  "name": "sportsmedia-charter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sports Media Charter - Private Aviation Platform for Professional Sports",
+  "author": "Sports Media, Inc.",
+  "license": "UNLICENSED",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:mobile": "cd apps/mobile && npm run start",
+    "dev:web": "cd apps/web && npm run dev",
+    "build": "turbo run build",
+    "build:mobile:ios": "cd apps/mobile && eas build --platform ios",
+    "build:mobile:android": "cd apps/mobile && eas build --platform android",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "db:generate": "cd packages/database && npm run generate",
+    "db:push": "cd packages/database && npm run push",
+    "db:studio": "cd packages/database && npm run studio",
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "lint:fix": "eslint . --fix --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "@typescript-eslint/parser": "^8.54.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-native": "^5.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.1",
+    "turbo": "^2.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "npm@10.0.0",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "sharp": "^0.34.5"
+  }
+}

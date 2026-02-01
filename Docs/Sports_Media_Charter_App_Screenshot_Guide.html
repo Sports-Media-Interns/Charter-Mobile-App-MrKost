@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sports Media Charter — Mobile App Screenshot Guide</title>
+<style>
+  @page { size: A4; margin: 20mm 15mm; }
+  @media print {
+    .page-break { page-break-before: always; }
+    a { text-decoration: none; color: #1E3A5F; }
+    .toc a { color: #1E3A5F; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; color: #1a1a1a; line-height: 1.6; max-width: 900px; margin: 0 auto; padding: 20px; }
+
+  /* Cover */
+  .cover { text-align: center; padding: 80px 20px 60px; }
+  .cover-logo { width: 80px; height: 80px; border-radius: 50%; background: #1E3A5F; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 24px; color: white; font-size: 36px; }
+  .cover h1 { font-size: 32px; color: #1E3A5F; margin-bottom: 8px; }
+  .cover h2 { font-size: 20px; color: #D4AF37; font-weight: 500; margin-bottom: 16px; }
+  .cover .subtitle { font-size: 14px; color: #6B7280; }
+  .cover .version { margin-top: 40px; font-size: 13px; color: #9CA3AF; }
+
+  /* TOC */
+  .toc { padding: 20px 0; }
+  .toc h2 { font-size: 22px; color: #1E3A5F; border-bottom: 2px solid #D4AF37; padding-bottom: 8px; margin-bottom: 20px; }
+  .toc ol { list-style: none; counter-reset: toc-counter; }
+  .toc > ol > li { counter-increment: toc-counter; margin-bottom: 6px; }
+  .toc > ol > li > a { display: flex; justify-content: space-between; padding: 8px 12px; border-radius: 6px; text-decoration: none; color: #1E3A5F; font-weight: 500; font-size: 14px; }
+  .toc > ol > li > a:hover { background: #F0F4F8; }
+  .toc > ol > li > a::before { content: counter(toc-counter) ". "; font-weight: 600; margin-right: 8px; min-width: 28px; }
+  .toc .toc-section { font-size: 12px; font-weight: 600; color: #D4AF37; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 16px; margin-bottom: 6px; padding-left: 12px; }
+
+  /* Section */
+  .section { margin-bottom: 40px; }
+  .section-header { background: #1E3A5F; color: white; padding: 12px 20px; border-radius: 8px 8px 0 0; }
+  .section-header h3 { font-size: 18px; font-weight: 600; }
+  .section-header .section-num { color: #D4AF37; margin-right: 8px; }
+  .section-body { border: 1px solid #E5E7EB; border-top: none; border-radius: 0 0 8px 8px; padding: 24px; background: #FAFBFC; }
+
+  /* Screenshot */
+  .screenshot-container { text-align: center; margin: 16px 0; }
+  .screenshot-container img { max-width: 360px; border: 1px solid #E5E7EB; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+  /* Description */
+  .screen-description { margin-top: 16px; }
+  .screen-description h4 { font-size: 15px; color: #1E3A5F; margin-bottom: 8px; }
+  .screen-description p { font-size: 13px; color: #4B5563; margin-bottom: 8px; }
+  .screen-description ul { font-size: 13px; color: #4B5563; padding-left: 20px; margin-bottom: 8px; }
+  .screen-description li { margin-bottom: 4px; }
+  .feature-tag { display: inline-block; background: #EBF4FF; color: #1E3A5F; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-right: 4px; margin-bottom: 4px; }
+  .screen-path { font-size: 11px; color: #9CA3AF; font-family: 'Consolas', monospace; margin-top: 8px; }
+
+  /* Missing placeholder */
+  .placeholder { background: #F9FAFB; border: 2px dashed #D1D5DB; border-radius: 12px; padding: 40px 20px; text-align: center; color: #9CA3AF; margin: 16px 0; }
+  .placeholder .icon { font-size: 32px; margin-bottom: 8px; }
+  .placeholder p { font-size: 13px; }
+
+  /* Summary box */
+  .summary-box { background: #FFFBEB; border: 1px solid #FCD34D; border-radius: 8px; padding: 16px; margin-top: 16px; }
+  .summary-box h4 { font-size: 14px; color: #92400E; margin-bottom: 6px; }
+  .summary-box p { font-size: 13px; color: #78350F; }
+
+  /* Footer */
+  .doc-footer { text-align: center; padding: 40px 20px; border-top: 1px solid #E5E7EB; margin-top: 40px; }
+  .doc-footer p { font-size: 12px; color: #9CA3AF; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER PAGE ============ -->
+<div class="cover">
+  <div class="cover-logo">&#9992;</div>
+  <h1>Sports Media Charter</h1>
+  <h2>Mobile App Screenshot Guide</h2>
+  <p class="subtitle">A comprehensive walkthrough of every screen in the Sports Media Charter mobile application, with detailed explanations of features and functionality.</p>
+  <p class="version">Version 1.0.0 &nbsp;|&nbsp; January 2026<br>A Division of Sports Media, Inc.<br>274 Mount Harvard Ave, Suite 900, Severance, CO 80550</p>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============ TABLE OF CONTENTS ============ -->
+<div class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <p class="toc-section">Authentication</p>
+    <li><a href="#login">Login Screen</a></li>
+    <li><a href="#register">Create Account</a></li>
+
+    <p class="toc-section">Main Navigation</p>
+    <li><a href="#home">Home Dashboard</a></li>
+    <li><a href="#home-search">Home Dashboard — Search Expanded</a></li>
+    <li><a href="#requests">Requests List</a></li>
+    <li><a href="#bookings">Trips / Bookings</a></li>
+
+    <p class="toc-section">Booking a Charter</p>
+    <li><a href="#new-request-oneway">New Charter Request — One Way</a></li>
+    <li><a href="#new-request-roundtrip">New Charter Request — Round Trip</a></li>
+    <li><a href="#new-request-multileg">New Charter Request — Multi-Leg</a></li>
+    <li><a href="#airport-search-empty">Airport Search — Empty State</a></li>
+    <li><a href="#airport-search-code">Airport Search — By Airport Code</a></li>
+    <li><a href="#airport-search-city">Airport Search — By City</a></li>
+    <li><a href="#airport-search-name">Airport Search — By Airport Name</a></li>
+
+    <p class="toc-section">Profile &amp; Account</p>
+    <li><a href="#profile">Profile Overview</a></li>
+    <li><a href="#edit-profile">Edit Profile</a></li>
+    <li><a href="#company">Company Settings</a></li>
+    <li><a href="#contacts">Company Contacts</a></li>
+    <li><a href="#personnel">Authorized Personnel</a></li>
+    <li><a href="#admin">Admin — User Management</a></li>
+
+    <p class="toc-section">Settings</p>
+    <li><a href="#notifications">Notification Preferences</a></li>
+    <li><a href="#security">Security &amp; Privacy</a></li>
+    <li><a href="#billing">Billing &amp; Payments</a></li>
+
+    <p class="toc-section">Legal &amp; Support</p>
+    <li><a href="#help">Help &amp; Support</a></li>
+    <li><a href="#terms">Terms of Service</a></li>
+    <li><a href="#privacy">Privacy Policy</a></li>
+    <li><a href="#user-guide">User Guide</a></li>
+  </ol>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ============ SCREENS ============ -->
+
+<!-- 1. Login -->
+<div class="section" id="login">
+  <div class="section-header"><h3><span class="section-num">1.</span> Login Screen</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_01.png" alt="Login Screen"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Login screen is the entry point of the Sports Media Charter app. It features the company branding with the airplane logo and tagline "Private Aviation for Professional Sports" against a navy-blue background.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Email &amp; Password Authentication</strong> — Standard credential-based login with a mail icon and lock icon for visual clarity.</li>
+        <li><strong>Forgot Password</strong> — Link to initiate the password recovery flow.</li>
+        <li><strong>Continue with SSO</strong> — Single Sign-On option for enterprise organizations that use identity providers.</li>
+        <li><strong>Request Access</strong> — Link for new users to navigate to the registration screen.</li>
+        <li><strong>Legal Footer</strong> — Tappable links to the Terms of Service and Privacy Policy, ensuring legal compliance from the first touchpoint.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Authentication</span>
+        <span class="feature-tag">SSO</span>
+        <span class="feature-tag">Password Recovery</span>
+      </div>
+      <p class="screen-path">app/(auth)/login.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Login screen provides secure access to the app via email/password or SSO, with links to registration, password recovery, and legal disclosures. It establishes the premium Sports Media Charter brand identity.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Register -->
+<div class="section" id="register">
+  <div class="section-header"><h3><span class="section-num">2.</span> Create Account</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_02.png" alt="Create Account Screen"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The registration screen allows new users to create an account to join Sports Media Charter. It uses a clean, minimal layout with a back arrow for easy navigation.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Full Name</strong> — Text field for the user's display name.</li>
+        <li><strong>Email Address</strong> — Used as the primary identifier and login credential.</li>
+        <li><strong>Password</strong> — Secure password entry with masking.</li>
+        <li><strong>Create Account Button</strong> — Submits registration to Supabase Auth; shows a loading state while processing.</li>
+        <li><strong>Sign In Link</strong> — Quick navigation back to the login screen for existing users.</li>
+        <li><strong>Legal Footer</strong> — Consent text with tappable links to Terms of Service and Privacy Policy.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Registration</span>
+        <span class="feature-tag">Supabase Auth</span>
+        <span class="feature-tag">Email Verification</span>
+      </div>
+      <p class="screen-path">app/(auth)/register.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Create Account screen collects the minimum required information to onboard new users. After submission, users receive an email verification link. Organization administrators must approve access before full functionality is available.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 3. Home Dashboard -->
+<div class="section" id="home">
+  <div class="section-header"><h3><span class="section-num">3.</span> Home Dashboard</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_03.png" alt="Home Dashboard"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Home Dashboard is the main landing screen after login. It provides a comprehensive at-a-glance overview of all charter activity with quick access to every major feature.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Status Cards</strong> — Three color-coded cards showing Active Requests (blue), Pending Quotes (gold), and Upcoming Flights (navy) counts.</li>
+        <li><strong>Quick Actions</strong> — Four action tiles: New Request, View Quotes, My Trips, and Team management.</li>
+        <li><strong>Upcoming Flight</strong> — Displays the next confirmed flight with route (DFW → LAX), date, time, passenger count, aircraft type, and status badge.</li>
+        <li><strong>Recent Activity</strong> — Timeline of recent events including new quotes received, requests submitted, and booking confirmations with timestamps.</li>
+        <li><strong>Need Assistance Banner</strong> — Quick access to 24/7 support.</li>
+        <li><strong>Tab Navigation</strong> — Bottom bar with Home, Requests, Book (+), Trips, Profile, and profile/edit tabs.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Dashboard</span>
+        <span class="feature-tag">Quick Actions</span>
+        <span class="feature-tag">Activity Feed</span>
+        <span class="feature-tag">Flight Status</span>
+      </div>
+      <p class="screen-path">app/(tabs)/index.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Home Dashboard serves as command center for charter operations. Users can instantly see their active workload, take quick actions, monitor upcoming flights, and review recent activity — all without leaving the screen.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Home Search Expanded -->
+<div class="section" id="home-search">
+  <div class="section-header"><h3><span class="section-num">4.</span> Home Dashboard — Search Expanded</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_13.png" alt="Home Dashboard with Search"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Home Dashboard with the global search bar expanded. This view shows the search field at the top of the dashboard, allowing users to quickly find requests, trips, and quotes.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Global Search</strong> — Search bar with placeholder text "Search requests, trips, quotes..." for finding any item across the app.</li>
+        <li><strong>Dark Mode Toggle</strong> — Moon icon in the header for switching between light and dark themes.</li>
+        <li><strong>Close Button</strong> — X icon to dismiss the search overlay.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Search</span>
+        <span class="feature-tag">Dark Mode</span>
+      </div>
+      <p class="screen-path">app/(tabs)/index.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The expanded search view lets users quickly locate any charter request, trip, or quote without navigating through multiple screens. The dark mode toggle provides a comfortable viewing experience in any lighting condition.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 5. Requests List (MISSING) -->
+<div class="section" id="requests">
+  <div class="section-header"><h3><span class="section-num">5.</span> Requests List</h3></div>
+  <div class="section-body">
+    <div class="placeholder">
+      <div class="icon">&#128196;</div>
+      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
+    </div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Requests tab displays all charter requests for the user's organization. Requests are shown as cards with route information, status badges, and key details.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Request Cards</strong> — Each card shows departure/arrival airports, date, passenger count, and current status.</li>
+        <li><strong>Status Filtering</strong> — Filter requests by status: Draft, Submitted, Quoting, Quoted, Approved, Booked, Completed, Cancelled.</li>
+        <li><strong>Search</strong> — Search by route, date, or confirmation number.</li>
+        <li><strong>New Request Button</strong> — Quick access to create a new charter request.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Request Management</span>
+        <span class="feature-tag">Status Tracking</span>
+        <span class="feature-tag">Filtering</span>
+      </div>
+      <p class="screen-path">app/(tabs)/requests.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Requests List provides a centralized view of all charter requests across all stages of the workflow, from initial draft to completed flights.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 6. Bookings/Trips (MISSING) -->
+<div class="section" id="bookings">
+  <div class="section-header"><h3><span class="section-num">6.</span> Trips / Bookings</h3></div>
+  <div class="section-body">
+    <div class="placeholder">
+      <div class="icon">&#9992;</div>
+      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
+    </div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Trips tab shows all confirmed bookings with flight details, status, and payment information. It serves as the primary view for managing upcoming and past travel.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Flight Cards</strong> — Detailed cards showing route, aircraft type, confirmation number, dates, and payment status.</li>
+        <li><strong>Status Badges</strong> — Visual indicators for Confirmed, In Progress, Completed, or Cancelled bookings.</li>
+        <li><strong>Passenger Manifest</strong> — Access to add and manage travelers for each booking.</li>
+        <li><strong>Payment Status</strong> — Quick view of payment state (Pending, Partial, Paid, Refunded).</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Booking Management</span>
+        <span class="feature-tag">Flight Details</span>
+        <span class="feature-tag">Manifest</span>
+      </div>
+      <p class="screen-path">app/(tabs)/bookings.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Trips screen is where users manage their confirmed charter bookings, view flight details, submit passenger manifests, and track payment status.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 7. New Request - One Way -->
+<div class="section" id="new-request-oneway">
+  <div class="section-header"><h3><span class="section-num">7.</span> New Charter Request — One Way</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_08.png" alt="New Charter Request - One Way"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The New Charter Request form with "One Way" trip type selected. This is the primary booking flow where users specify all flight details to receive quotes from charter operators.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Trip Type Selector</strong> — Three options: One Way (selected), Round Trip, and Multi-Leg. Each adjusts the form accordingly.</li>
+        <li><strong>Flight Details</strong> — Departure and Arrival airport fields with a swap button between them, plus Date and Time pickers.</li>
+        <li><strong>Passengers</strong> — Stepper control to set the number of passengers (minimum 1).</li>
+        <li><strong>Urgency Level</strong> — Three tiers: Standard (48–72 hours), Urgent (24–48 hours), Emergency (under 24 hours). Standard is selected by default with a green checkmark.</li>
+        <li><strong>Special Requirements</strong> — Free-text field for baggage notes, catering requests, accessibility needs, etc.</li>
+        <li><strong>Submit Button</strong> — Gold "Submit Request for Quotes" button with airplane icon. Footer note indicates quotes arrive within 2–4 hours.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Booking Flow</span>
+        <span class="feature-tag">One Way</span>
+        <span class="feature-tag">Urgency Levels</span>
+      </div>
+      <p class="screen-path">app/(tabs)/new-request.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The One Way request form captures all essential flight details in a single scrollable form. The urgency level system ensures the broker team prioritizes time-sensitive requests appropriately.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 8. New Request - Round Trip -->
+<div class="section" id="new-request-roundtrip">
+  <div class="section-header"><h3><span class="section-num">8.</span> New Charter Request — Round Trip</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_09.png" alt="New Charter Request - Round Trip"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The New Charter Request form with "Round Trip" selected. This variant automatically generates two flight legs — outbound and return — each with independent airport, date, and time fields.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Leg 1 (Outbound)</strong> — Departure airport, arrival airport, date, and time for the outbound flight.</li>
+        <li><strong>Leg 2 (Return)</strong> — Separate section with its own departure/arrival airports (pre-populated as reverse of Leg 1), date, and time fields.</li>
+        <li><strong>Shared Settings</strong> — Passenger count, urgency level, and special requirements apply to both legs.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Booking Flow</span>
+        <span class="feature-tag">Round Trip</span>
+        <span class="feature-tag">Multi-Leg</span>
+      </div>
+      <p class="screen-path">app/(tabs)/new-request.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Round Trip form automatically creates two linked flight legs, streamlining the most common booking pattern for sports teams traveling to away games and returning home.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 9. New Request - Multi-Leg -->
+<div class="section" id="new-request-multileg">
+  <div class="section-header"><h3><span class="section-num">9.</span> New Charter Request — Multi-Leg</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_10.png" alt="New Charter Request - Multi-Leg"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The New Charter Request form with "Multi-Leg" selected. This variant supports complex itineraries with multiple stops, ideal for road trips or tournament travel.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Multiple Legs</strong> — Each leg has independent departure/arrival airports, date, and time. Starts with two legs by default.</li>
+        <li><strong>Add Another Leg</strong> — Button to add additional flight legs to the itinerary.</li>
+        <li><strong>Remove Leg</strong> — Red delete icon on each leg card to remove a specific leg.</li>
+        <li><strong>Leg Numbering</strong> — Clearly labeled "Leg 1", "Leg 2", etc. with colored badges.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Booking Flow</span>
+        <span class="feature-tag">Multi-Leg</span>
+        <span class="feature-tag">Complex Itineraries</span>
+      </div>
+      <p class="screen-path">app/(tabs)/new-request.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Multi-Leg form handles complex travel schedules with unlimited stops. This is essential for sports teams on multi-city road trips or tournament circuits.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 10. Airport Search Empty -->
+<div class="section" id="airport-search-empty">
+  <div class="section-header"><h3><span class="section-num">10.</span> Airport Search — Empty State</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_04.png" alt="Airport Search Empty"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The airport search modal that appears when tapping on a departure or arrival airport field. It provides a full-screen search experience with multiple filter tabs.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Filter Tabs</strong> — Four search modes: All, Airport Code, City, and Airport Name for flexible searching.</li>
+        <li><strong>Search Input</strong> — Text field with placeholder "Search by code, city, or name..." and a search icon.</li>
+        <li><strong>Empty State</strong> — Airplane icon with instructional text: "Enter at least 2 characters to search by airport code, city name, or airport name."</li>
+        <li><strong>Close Button</strong> — X icon to dismiss the modal and return to the request form.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Airport Search</span>
+        <span class="feature-tag">Modal</span>
+        <span class="feature-tag">Filtering</span>
+      </div>
+      <p class="screen-path">src/components/AirportSearch.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The airport search modal provides a dedicated full-screen interface for finding airports. The multi-tab filtering system ensures users can search however is most natural to them.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 11. Airport Search by Code -->
+<div class="section" id="airport-search-code">
+  <div class="section-header"><h3><span class="section-num">11.</span> Airport Search — By Airport Code</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_05.png" alt="Airport Search by Code"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>Airport search results when filtering by "Airport Code" and typing "lax". The search is case-insensitive and returns matching results instantly.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Active Filter Tab</strong> — "Airport Code" tab is highlighted in dark navy, indicating the active search mode.</li>
+        <li><strong>Result Card</strong> — Shows the IATA code (LAX) prominently, followed by the ICAO code (KLAX), full airport name, and location.</li>
+        <li><strong>Airplane Icon</strong> — Visual indicator for commercial airports.</li>
+        <li><strong>Clear Button</strong> — X button in the search field to clear the current query.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">IATA Code</span>
+        <span class="feature-tag">ICAO Code</span>
+        <span class="feature-tag">Instant Search</span>
+      </div>
+      <p class="screen-path">src/components/AirportSearch.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>Searching by airport code is the fastest method for users who know the three-letter IATA code. Results display both IATA and ICAO codes along with the full airport name and city.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 12. Airport Search by City -->
+<div class="section" id="airport-search-city">
+  <div class="section-header"><h3><span class="section-num">12.</span> Airport Search — By City</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_06.png" alt="Airport Search by City"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>Airport search results when filtering by "City" and typing "denver". This mode searches by city name rather than airport code.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>City Filter Active</strong> — The "City" tab is highlighted, filtering results to match by city name.</li>
+        <li><strong>Location Display</strong> — Shows "Denver, CO, USA" as the location context beneath the airport name.</li>
+        <li><strong>Single Result</strong> — Only DEN (Denver International Airport) matches the "denver" query in the city filter.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">City Search</span>
+        <span class="feature-tag">Location Context</span>
+      </div>
+      <p class="screen-path">src/components/AirportSearch.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>City-based search is ideal for users who know the destination city but not the airport code. The app matches all airports serving that city.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 13. Airport Search by Name -->
+<div class="section" id="airport-search-name">
+  <div class="section-header"><h3><span class="section-num">13.</span> Airport Search — By Airport Name</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_07.png" alt="Airport Search by Name"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>Airport search results when filtering by "Airport Name" and typing "van". This mode searches the full airport name, returning diverse global results.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Airport Name Filter</strong> — Searches within the full name of airports worldwide.</li>
+        <li><strong>Multiple Results</strong> — Shows Vancouver (YVR), Van Nuys (VNY), and Helsinki-Vantaa (HEL) — all containing "van" in their names.</li>
+        <li><strong>Private Airport Badge</strong> — VNY (Van Nuys) is tagged with a purple "Private" badge, distinguishing it from commercial airports.</li>
+        <li><strong>Different Icons</strong> — Commercial airports show an airplane icon; private airports show a building icon.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Name Search</span>
+        <span class="feature-tag">Private Airports</span>
+        <span class="feature-tag">Global Coverage</span>
+      </div>
+      <p class="screen-path">src/components/AirportSearch.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>Name-based search casts the widest net, useful when users remember part of an airport's name. The Private airport badge is especially relevant for charter aviation clients who frequently use FBOs at private fields.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 14. Profile -->
+<div class="section" id="profile">
+  <div class="section-header"><h3><span class="section-num">14.</span> Profile Overview</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_11.png" alt="Profile Screen"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Profile tab is the central hub for account management, company information, team contacts, and administrative functions.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>User Info</strong> — Avatar (initials), name, email, and role badge ("Team Admin"). Edit icon for quick profile changes.</li>
+        <li><strong>Company Information</strong> — Organization name (Dallas Mavericks), type (NBA Team - Basketball), home airport (DFW), and billing email. Edit icon for company details.</li>
+        <li><strong>Company Contacts</strong> — List of organizational contacts with their roles, emails, and phone numbers. "Primary" badge on the main contact. Add button (+) for new contacts.</li>
+        <li><strong>Authorized Personnel</strong> — List of people authorized to approve or book charters, with permission badges (Can Approve, Can Book). Shows names, titles, and initials avatars.</li>
+        <li><strong>Administration</strong> — "User Management" link with "Admin" badge for organization administrators.</li>
+        <li><strong>Settings Icons</strong> — Phone and gear icons in the header for quick access to support and settings.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Account</span>
+        <span class="feature-tag">Company</span>
+        <span class="feature-tag">Team</span>
+        <span class="feature-tag">Permissions</span>
+        <span class="feature-tag">Admin</span>
+      </div>
+      <p class="screen-path">app/(tabs)/profile.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Profile screen consolidates all account, company, and team management into one scrollable view. It provides role-based access — only administrators see the Administration section.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 15. Edit Profile -->
+<div class="section" id="edit-profile">
+  <div class="section-header"><h3><span class="section-num">15.</span> Edit Profile</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_12.png" alt="Edit Profile Screen"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Edit Profile screen allows users to update their personal information and profile photo.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Profile Photo</strong> — Large circular avatar with "Change Photo" button (supports camera and gallery upload).</li>
+        <li><strong>Personal Fields</strong> — Full Name, Email Address, Phone Number, and Job Title with appropriate input icons.</li>
+        <li><strong>Security Section</strong> — "Change Password" link showing the last changed date.</li>
+        <li><strong>Save Changes</strong> — Navy blue button to persist all edits.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Profile Edit</span>
+        <span class="feature-tag">Photo Upload</span>
+        <span class="feature-tag">Password Change</span>
+      </div>
+      <p class="screen-path">app/(tabs)/profile-edit.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Edit Profile screen provides a straightforward form for updating personal details and profile photo. The security section gives quick access to password management.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 16. Company Settings (MISSING) -->
+<div class="section" id="company">
+  <div class="section-header"><h3><span class="section-num">16.</span> Company Settings</h3></div>
+  <div class="section-body">
+    <div class="placeholder">
+      <div class="icon">&#127970;</div>
+      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
+    </div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Company Settings screen allows team administrators to manage organization-level details including company name, sport, league affiliation, home airport, and billing address.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Organization Name</strong> — Company/team name displayed across the app.</li>
+        <li><strong>Sport &amp; League</strong> — Sport category and league affiliation for proper categorization.</li>
+        <li><strong>Home Airport</strong> — Default departure airport for the organization.</li>
+        <li><strong>Billing Address</strong> — Full address used for invoicing.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Company</span>
+        <span class="feature-tag">Organization</span>
+        <span class="feature-tag">Billing</span>
+      </div>
+      <p class="screen-path">app/settings/company.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>Company Settings manages organization-level information that applies to all users and bookings within the team.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 17. Company Contacts (MISSING) -->
+<div class="section" id="contacts">
+  <div class="section-header"><h3><span class="section-num">17.</span> Company Contacts</h3></div>
+  <div class="section-body">
+    <div class="placeholder">
+      <div class="icon">&#128100;</div>
+      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
+    </div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Company Contacts screen manages key organizational contacts that brokers can reach for coordination. Contacts include travel coordinators, team managers, and other stakeholders.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Contact List</strong> — Full list of company contacts with names, roles, emails, and phone numbers.</li>
+        <li><strong>Primary Contact</strong> — Designated primary contact marked with a badge.</li>
+        <li><strong>Add/Edit/Remove</strong> — Full CRUD operations on company contacts.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Contacts</span>
+        <span class="feature-tag">Team Coordination</span>
+      </div>
+      <p class="screen-path">app/settings/contacts.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>Company Contacts maintains the list of people brokers should contact for charter coordination, ensuring smooth communication between all parties.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 18. Personnel (MISSING) -->
+<div class="section" id="personnel">
+  <div class="section-header"><h3><span class="section-num">18.</span> Authorized Personnel</h3></div>
+  <div class="section-body">
+    <div class="placeholder">
+      <div class="icon">&#128101;</div>
+      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
+    </div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Authorized Personnel screen manages individuals who are authorized to approve charter requests or make bookings on behalf of the organization.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Personnel List</strong> — Names, titles, and avatar initials for each authorized person.</li>
+        <li><strong>Permission Badges</strong> — "Can Approve" and "Can Book" badges showing each person's authorization level.</li>
+        <li><strong>Add Personnel</strong> — Button to add new authorized individuals.</li>
+        <li><strong>Detail View</strong> — Tap to view/edit a person's permissions and details.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Authorization</span>
+        <span class="feature-tag">Permissions</span>
+        <span class="feature-tag">Team Management</span>
+      </div>
+      <p class="screen-path">app/settings/personnel.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>Authorized Personnel controls who within the organization can approve quotes and confirm bookings, ensuring proper governance over charter spending.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 19. Admin (MISSING) -->
+<div class="section" id="admin">
+  <div class="section-header"><h3><span class="section-num">19.</span> Admin — User Management</h3></div>
+  <div class="section-body">
+    <div class="placeholder">
+      <div class="icon">&#128272;</div>
+      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
+    </div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Admin screen is only visible to users with the "team_admin" role. It provides user management capabilities including adding, editing, and deactivating team members.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>User List</strong> — All users in the organization with their roles and status.</li>
+        <li><strong>Role Assignment</strong> — Set users as Team Admin, Travel Coordinator, or other roles.</li>
+        <li><strong>Activate/Deactivate</strong> — Control user access to the platform.</li>
+        <li><strong>Invite Users</strong> — Send invitation emails to new team members.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Admin Only</span>
+        <span class="feature-tag">User Management</span>
+        <span class="feature-tag">Role Control</span>
+      </div>
+      <p class="screen-path">app/settings/admin.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Admin panel gives team administrators full control over their organization's users, roles, and access levels within the Sports Media Charter platform.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 20. Notifications -->
+<div class="section" id="notifications">
+  <div class="section-header"><h3><span class="section-num">20.</span> Notification Preferences</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_18.png" alt="Notification Preferences"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Notifications settings screen allows users to control which alerts they receive and through which channels (push, email).</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Push Notifications</strong> — Master toggle for all push notifications on the device.</li>
+        <li><strong>Email Notifications</strong> — Master toggle for email-based alerts.</li>
+        <li><strong>Category Toggles</strong> — Individual toggles for: New Quotes, Booking Updates, Flight Reminders, Approval Requests, and Marketing &amp; Promotions.</li>
+        <li><strong>Marketing Disabled by Default</strong> — The Marketing &amp; Promotions toggle is off by default, respecting user preferences.</li>
+        <li><strong>Footer Note</strong> — Informs users that some notifications are required for critical booking updates and cannot be disabled.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Notifications</span>
+        <span class="feature-tag">Preferences</span>
+        <span class="feature-tag">Push</span>
+        <span class="feature-tag">Email</span>
+      </div>
+      <p class="screen-path">app/settings/notifications.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Notification Preferences screen gives users granular control over their alert experience. Seven toggle categories cover all notification types, with marketing opt-out by default.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 21. Security -->
+<div class="section" id="security">
+  <div class="section-header"><h3><span class="section-num">21.</span> Security &amp; Privacy</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_19.png" alt="Security & Privacy"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Security &amp; Privacy screen provides comprehensive account security management including authentication options, session control, and privacy tools.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Password Section</strong> — "Change Password" with last-changed date indicator.</li>
+        <li><strong>Authentication</strong> — Biometric Login toggle (Face ID / fingerprint) and Two-Factor Authentication toggle.</li>
+        <li><strong>Security Alerts</strong> — "New Login Alerts" toggle to be notified of new device logins.</li>
+        <li><strong>Active Sessions</strong> — List of all active sessions showing device name, location, and timing. "Current" badge on the active device. "End" button to revoke other sessions.</li>
+        <li><strong>Privacy Section</strong> — "Download My Data" to export personal information, and "Privacy Policy" link.</li>
+        <li><strong>Danger Zone</strong> — "Delete Account" option in red, clearly separated to prevent accidental actions.</li>
+        <li><strong>Support Footer</strong> — Security team contact email and phone number.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Security</span>
+        <span class="feature-tag">Biometric</span>
+        <span class="feature-tag">2FA</span>
+        <span class="feature-tag">Sessions</span>
+        <span class="feature-tag">Privacy</span>
+        <span class="feature-tag">GDPR</span>
+      </div>
+      <p class="screen-path">app/settings/security.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Security &amp; Privacy screen consolidates all security controls: authentication methods, session management, privacy tools (data export, account deletion), and security contact information.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 22. Billing -->
+<div class="section" id="billing">
+  <div class="section-header"><h3><span class="section-num">22.</span> Billing &amp; Payments</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_14.png" alt="Billing & Payments"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Billing &amp; Payments screen provides a complete financial management interface for charter payments, invoices, and payment methods.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Outstanding Balance</strong> — Large display showing the current balance ($38,000.00) with pending invoice count and a "Pay Now" button for immediate payment.</li>
+        <li><strong>Payment Methods</strong> — List of saved cards and bank accounts. Shows card brand (Visa, Amex), last four digits, expiration date, and "Default" badge. "Add Payment Method" button at the bottom.</li>
+        <li><strong>Billing Information</strong> — Company name, address, Tax ID, and billing email with an "Edit Billing Info" button.</li>
+        <li><strong>Recent Invoices</strong> — Scrollable list of invoices showing invoice number (INV-001, etc.), route, date, amount, and status badge (Paid in green, Pending in yellow). Tappable for full invoice details.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Billing</span>
+        <span class="feature-tag">Payments</span>
+        <span class="feature-tag">Invoices</span>
+        <span class="feature-tag">Stripe</span>
+      </div>
+      <p class="screen-path">app/settings/billing.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Billing &amp; Payments screen is the financial hub of the app. It shows outstanding balances, manages payment methods, displays billing details, and lists all invoices with their payment status.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 23. Help & Support -->
+<div class="section" id="help">
+  <div class="section-header"><h3><span class="section-num">23.</span> Help &amp; Support</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_15.png" alt="Help & Support"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Help &amp; Support screen is the central resource for getting assistance, finding answers, and accessing all legal and educational resources.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Search</strong> — Full-text search across help content.</li>
+        <li><strong>Contact Us</strong> — Three contact cards: Call Us (24/7 Support Line), Email (charter@sportsmedia.net), and Live Chat.</li>
+        <li><strong>FAQ Section</strong> — Expandable/collapsible frequently asked questions covering common topics: requesting flights, quote timing, booking modifications, adding travelers, and payment methods.</li>
+        <li><strong>Resources</strong> — Links to User Guide, Video Tutorials, Terms of Service, and Privacy Policy.</li>
+        <li><strong>Feedback</strong> — "We'd love your feedback!" card with a heart icon and "Send Feedback" button that opens a feedback modal with category selection (General, Bug Report, Feature Request).</li>
+        <li><strong>App Info Footer</strong> — App name, version number, company name, and copyright notice.</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Support</span>
+        <span class="feature-tag">FAQ</span>
+        <span class="feature-tag">Contact</span>
+        <span class="feature-tag">Feedback</span>
+        <span class="feature-tag">Resources</span>
+      </div>
+      <p class="screen-path">app/settings/help.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Help &amp; Support screen provides multiple avenues for assistance — phone, email, live chat, FAQ, and feedback — plus direct links to all legal disclosures and the User Guide.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 24. Terms of Service -->
+<div class="section" id="terms">
+  <div class="section-header"><h3><span class="section-num">24.</span> Terms of Service</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_16.png" alt="Terms of Service"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Terms of Service screen presents the full legal terms governing use of the Sports Media Charter application. Effective January 1, 2026.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Header Card</strong> — Document icon, title, company name ("A Division of Sports Media, Inc."), and effective date.</li>
+        <li><strong>Expandable Sections</strong> — 12+ collapsible sections for easy navigation through the legal document:</li>
+        <li>1. Agreement to Terms — Binding agreement notice with acceptance clause</li>
+        <li>2. Service Description</li>
+        <li>3. User Accounts &amp; Responsibilities</li>
+        <li>4. Booking Terms &amp; Conditions</li>
+        <li>5. Copyright &amp; Intellectual Property</li>
+        <li>6. Trademark Notice</li>
+        <li>7. Limitation of Liability</li>
+        <li>8. Indemnification</li>
+        <li>9. Disclaimers</li>
+        <li>10. Governing Law &amp; Disputes</li>
+        <li>11. Termination</li>
+        <li>12. Modifications to Terms</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Legal</span>
+        <span class="feature-tag">Terms</span>
+        <span class="feature-tag">Compliance</span>
+      </div>
+      <p class="screen-path">app/legal/terms.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Terms of Service is a comprehensive legal document presented in an accessible expandable-section format. It covers all aspects of using the charter platform including booking terms, liability, and dispute resolution.</p>
+    </div>
+  </div>
+</div>
+
+<!-- 25. Privacy Policy -->
+<div class="section" id="privacy">
+  <div class="section-header"><h3><span class="section-num">25.</span> Privacy Policy</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_17.png" alt="Privacy Policy"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The Privacy Policy screen details how Sports Media Charter collects, uses, and protects user data. Effective January 1, 2026.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Header Card</strong> — Shield icon, title, company name, and effective date.</li>
+        <li><strong>Expandable Sections</strong> — 13+ collapsible sections covering all privacy topics:</li>
+        <li>1. Introduction — Commitment to privacy, website reference</li>
+        <li>2. Information We Collect</li>
+        <li>3. How We Use Your Information</li>
+        <li>4. Information Sharing &amp; Disclosure</li>
+        <li>5. Data Security</li>
+        <li>6. Two-Factor Authentication Policy</li>
+        <li>7. Your Privacy Rights</li>
+        <li>8. Download Your Data</li>
+        <li>9. Account Deletion (14-day cooling-off period)</li>
+        <li>10. Data Retention</li>
+        <li>11. Children's Privacy</li>
+        <li>12. International Data Transfers</li>
+        <li>13. Changes to This Policy</li>
+      </ul>
+      <div>
+        <span class="feature-tag">Privacy</span>
+        <span class="feature-tag">GDPR</span>
+        <span class="feature-tag">Data Rights</span>
+        <span class="feature-tag">Compliance</span>
+      </div>
+      <p class="screen-path">app/legal/privacy-policy.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The Privacy Policy provides full transparency on data handling practices. It includes GDPR-aligned features like data download, account deletion with a cooling-off period, and explicit data retention policies.</p>
+    </div>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- 26. User Guide -->
+<div class="section" id="user-guide">
+  <div class="section-header"><h3><span class="section-num">26.</span> User Guide</h3></div>
+  <div class="section-body">
+    <div class="screenshot-container"><img src="screenshots/slide_20.png" alt="User Guide"></div>
+    <div class="screen-description">
+      <h4>Overview</h4>
+      <p>The in-app User Guide provides a comprehensive walkthrough of the entire Sports Media Charter application. Accessible from Help &amp; Support → Resources → User Guide.</p>
+      <h4>Key Features</h4>
+      <ul>
+        <li><strong>Welcome Card</strong> — Airplane icon with introductory text explaining the app's purpose.</li>
+        <li><strong>Expandable Sections</strong> — Nine guide sections, each with an icon:</li>
+        <li>Getting Started — Sign-in instructions, home screen overview, navigation guide with all five tabs explained</li>
+        <li>Requesting a Charter — Step-by-step booking instructions, urgency levels, request status flow</li>
+        <li>Reviewing Quotes — What's in a quote, how to compare and accept</li>
+        <li>Managing Bookings — Trip details, passenger manifest, modifications and cancellations</li>
+        <li>Billing &amp; Payments — Payment methods, invoices, payment status explanations</li>
+        <li>Notifications — All seven notification categories, channel controls</li>
+        <li>Team Management — Contacts, authorized personnel, admin features</li>
+        <li>Security &amp; Privacy — Biometric, 2FA, sessions, data export, account deletion</li>
+        <li>Messaging Your Broker — In-request messaging for coordination</li>
+      </ul>
+      <div>
+        <span class="feature-tag">User Guide</span>
+        <span class="feature-tag">Help</span>
+        <span class="feature-tag">Onboarding</span>
+        <span class="feature-tag">Documentation</span>
+      </div>
+      <p class="screen-path">app/legal/user-guide.tsx</p>
+    </div>
+    <div class="summary-box">
+      <h4>Summary</h4>
+      <p>The User Guide is a complete in-app reference covering every feature. Its expandable section design makes it easy to find specific topics without scrolling through the entire document.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="doc-footer">
+  <p><strong>Sports Media Charter Travel</strong><br>
+  A Division of Sports Media, Inc.<br>
+  274 Mount Harvard Ave, Suite 900, Severance, CO 80550<br>
+  charter@sportsmedia.net &nbsp;|&nbsp; +1 (970) 436-0580<br><br>
+  &copy; 2026 Sports Media, Inc. All rights reserved.</p>
+</div>
+
+</body>
+</html>
