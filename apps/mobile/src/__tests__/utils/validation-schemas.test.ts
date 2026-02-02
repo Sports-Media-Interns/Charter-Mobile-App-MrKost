@@ -31,6 +31,7 @@ describe('loginSchema', () => {
 describe('registerSchema', () => {
   const validInput = {
     fullName: 'John Doe',
+    organizationName: 'Dallas Mavericks',
     email: 'test@example.com',
     password: 'Password1',
     confirmPassword: 'Password1',

@@ -41,6 +41,16 @@ const slides = [
     desc: 'The home screen with the global search bar activated. Users can search across requests, trips, and quotes from a single input field. The search persists over the dashboard layout, allowing quick navigation without leaving the home screen context.'
   },
   {
+    file: 'slide_21.png',
+    title: 'Requests List',
+    desc: 'The Requests tab displays all charter requests for the user\'s organization. Shows an empty state with a document icon and "No requests found" message when no requests exist, with a prominent "Create New Request" button. The bottom tab bar highlights the Requests tab. When populated, request cards show departure/arrival airports, date, passenger count, status badges, and urgency level.'
+  },
+  {
+    file: 'slide_22.png',
+    title: 'Trips / Bookings',
+    desc: 'The Trips tab shows all confirmed bookings with an airplane icon empty state displaying "No trips found" when no bookings exist. The "Book a Charter" button directs users to the booking flow. When populated, flight cards show route, aircraft type, confirmation number, dates, passenger count, and payment status with color-coded badges.'
+  },
+  {
     file: 'slide_08.png',
     title: 'New Charter Request - One Way',
     desc: 'The primary booking form for one-way charter flights. Users select Trip Type (One Way is highlighted), then configure Flight Details including Departure Airport, Arrival Airport, Date, and Time. Passenger count is adjustable with +/- controls. Urgency Level options are Standard (48-72 hours notice), Urgent (24-48 hours), or Emergency (under 24 hours). Special Requirements can be noted before submitting the request for quotes.'
@@ -84,6 +94,26 @@ const slides = [
     file: 'slide_12.png',
     title: 'Edit Profile',
     desc: 'Profile editing form with fields for Full Name, Email Address, Phone Number, and Job Title. Includes a Change Photo option for updating the profile avatar, and a Security section with Change Password (showing last changed 30 days ago). Save Changes persists updates to the server.'
+  },
+  {
+    file: 'slide_23.png',
+    title: 'Company Settings',
+    desc: 'The Company Information screen allows team administrators to manage organization-level details. Shows a company logo placeholder with "Change Logo" button, and form fields for Company Name (Dallas Mavericks), Company Type (NBA Team), Sport/Industry (Basketball), Home Airport IATA Code (DFW), and Company Address fields including Street Address (2500 Victory Avenue).'
+  },
+  {
+    file: 'slide_24.png',
+    title: 'Company Contacts',
+    desc: 'The Company Contacts screen manages key organizational contacts for charter coordination. Shows contact cards with avatar initials, names, roles, email addresses, and phone numbers. Sarah Johnson is marked as Primary contact (Travel Coordinator). Each card has Edit and Remove actions, with a "Set as Primary" option on non-primary contacts. An "Add New Contact" button is at the bottom.'
+  },
+  {
+    file: 'slide_25.png',
+    title: 'Authorized Personnel',
+    desc: 'The Authorized Personnel screen manages individuals authorized to approve requests or make bookings. Shows personnel cards with avatar initials, names, titles, contact info, and permission badges (Can Approve, Can Book, View Reports). Mark Cuban (Owner) has all permissions enabled. Jason Kidd (Head Coach) has Can Approve and View Reports but not Can Book. Each card has Edit and Remove actions.'
+  },
+  {
+    file: 'slide_26.png',
+    title: 'Admin - User Management',
+    desc: 'The Admin panel showing user management for the Dallas Mavericks organization. Displays summary cards (5 Total, 3 Active, 1 Pending, 1 Inactive) with a search bar. User cards show avatar initials, name, title, email, role badge (Team Admin, Manager), status (Active), department, and last login date. Admin users see Suspend and Details actions for other users.'
   },
   {
     file: 'slide_14.png',

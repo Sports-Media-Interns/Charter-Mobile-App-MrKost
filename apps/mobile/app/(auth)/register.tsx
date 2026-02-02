@@ -13,7 +13,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 export default function RegisterScreen() {
   const { control, handleSubmit: rhfHandleSubmit, formState: { errors }, setError: setFormError } = useForm<RegisterInput>({
     resolver: zodResolver(registerSchema),
-    defaultValues: { fullName: '', email: '', password: '', confirmPassword: '' },
+    defaultValues: { fullName: '', organizationName: '', email: '', password: '', confirmPassword: '' },
   });
   const [isLoading, setIsLoading] = useState(false);
   const { trackEvent, trackButtonClick, trackError } = useCRMTracker();
@@ -27,7 +27,7 @@ export default function RegisterScreen() {
       const { error: authError } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
-        options: { data: { full_name: formData.fullName } },
+        options: { data: { full_name: formData.fullName, organization_name: formData.organizationName } },
       });
 
       if (authError) throw authError;
@@ -80,6 +80,21 @@ export default function RegisterScreen() {
           )}
         />
         {errors.fullName && <Text style={styles.fieldError}>{errors.fullName.message}</Text>}
+
+        <Text style={styles.label}>Organization Name</Text>
+        <Controller
+          control={control}
+          name="organizationName"
+          render={({ field: { onChange, value } }) => (
+            <TextInput
+              style={[styles.input, errors.organizationName && { borderColor: '#DC2626' }]}
+              placeholder="e.g. Dallas Mavericks"
+              value={value}
+              onChangeText={onChange}
+            />
+          )}
+        />
+        {errors.organizationName && <Text style={styles.fieldError}>{errors.organizationName.message}</Text>}
 
         <Text style={styles.label}>Email</Text>
         <Controller

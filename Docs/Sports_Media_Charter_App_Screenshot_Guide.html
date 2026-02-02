@@ -64,6 +64,12 @@
   /* Footer */
   .doc-footer { text-align: center; padding: 40px 20px; border-top: 1px solid #E5E7EB; margin-top: 40px; }
   .doc-footer p { font-size: 12px; color: #9CA3AF; }
+
+  /* Back to TOC link */
+  .back-to-toc { display: block; text-align: right; margin-top: 12px; font-size: 12px; }
+  .back-to-toc a { color: #D4AF37; text-decoration: none; font-weight: 500; }
+  .back-to-toc a:hover { text-decoration: underline; }
+  @media print { .back-to-toc a { color: #1E3A5F; } }
 </style>
 </head>
 <body>
@@ -80,7 +86,7 @@
 <div class="page-break"></div>
 
 <!-- ============ TABLE OF CONTENTS ============ -->
-<div class="toc">
+<div class="toc" id="toc">
   <h2>Table of Contents</h2>
   <ol>
     <p class="toc-section">Authentication</p>
@@ -154,6 +160,7 @@
       <h4>Summary</h4>
       <p>The Login screen provides secure access to the app via email/password or SSO, with links to registration, password recovery, and legal disclosures. It establishes the premium Sports Media Charter brand identity.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -185,6 +192,7 @@
       <h4>Summary</h4>
       <p>The Create Account screen collects the minimum required information to onboard new users. After submission, users receive an email verification link. Organization administrators must approve access before full functionality is available.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -219,6 +227,7 @@
       <h4>Summary</h4>
       <p>The Home Dashboard serves as command center for charter operations. Users can instantly see their active workload, take quick actions, monitor upcoming flights, and review recent activity — all without leaving the screen.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -246,19 +255,17 @@
       <h4>Summary</h4>
       <p>The expanded search view lets users quickly locate any charter request, trip, or quote without navigating through multiple screens. The dark mode toggle provides a comfortable viewing experience in any lighting condition.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
 <div class="page-break"></div>
 
-<!-- 5. Requests List (MISSING) -->
+<!-- 5. Requests List -->
 <div class="section" id="requests">
   <div class="section-header"><h3><span class="section-num">5.</span> Requests List</h3></div>
   <div class="section-body">
-    <div class="placeholder">
-      <div class="icon">&#128196;</div>
-      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
-    </div>
+    <div class="screenshot-container"><img src="screenshots/slide_21.png" alt="Requests List"></div>
     <div class="screen-description">
       <h4>Overview</h4>
       <p>The Requests tab displays all charter requests for the user's organization. Requests are shown as cards with route information, status badges, and key details.</p>
@@ -280,17 +287,15 @@
       <h4>Summary</h4>
       <p>The Requests List provides a centralized view of all charter requests across all stages of the workflow, from initial draft to completed flights.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
-<!-- 6. Bookings/Trips (MISSING) -->
+<!-- 6. Bookings/Trips -->
 <div class="section" id="bookings">
   <div class="section-header"><h3><span class="section-num">6.</span> Trips / Bookings</h3></div>
   <div class="section-body">
-    <div class="placeholder">
-      <div class="icon">&#9992;</div>
-      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
-    </div>
+    <div class="screenshot-container"><img src="screenshots/slide_22.png" alt="Trips / Bookings"></div>
     <div class="screen-description">
       <h4>Overview</h4>
       <p>The Trips tab shows all confirmed bookings with flight details, status, and payment information. It serves as the primary view for managing upcoming and past travel.</p>
@@ -312,6 +317,7 @@
       <h4>Summary</h4>
       <p>The Trips screen is where users manage their confirmed charter bookings, view flight details, submit passenger manifests, and track payment status.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -345,6 +351,7 @@
       <h4>Summary</h4>
       <p>The One Way request form captures all essential flight details in a single scrollable form. The urgency level system ensures the broker team prioritizes time-sensitive requests appropriately.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -373,6 +380,7 @@
       <h4>Summary</h4>
       <p>The Round Trip form automatically creates two linked flight legs, streamlining the most common booking pattern for sports teams traveling to away games and returning home.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -404,6 +412,7 @@
       <h4>Summary</h4>
       <p>The Multi-Leg form handles complex travel schedules with unlimited stops. This is essential for sports teams on multi-city road trips or tournament circuits.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -433,6 +442,7 @@
       <h4>Summary</h4>
       <p>The airport search modal provides a dedicated full-screen interface for finding airports. The multi-tab filtering system ensures users can search however is most natural to them.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -464,6 +474,7 @@
       <h4>Summary</h4>
       <p>Searching by airport code is the fastest method for users who know the three-letter IATA code. Results display both IATA and ICAO codes along with the full airport name and city.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -491,6 +502,7 @@
       <h4>Summary</h4>
       <p>City-based search is ideal for users who know the destination city but not the airport code. The app matches all airports serving that city.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -520,6 +532,7 @@
       <h4>Summary</h4>
       <p>Name-based search casts the widest net, useful when users remember part of an airport's name. The Private airport badge is especially relevant for charter aviation clients who frequently use FBOs at private fields.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -555,6 +568,7 @@
       <h4>Summary</h4>
       <p>The Profile screen consolidates all account, company, and team management into one scrollable view. It provides role-based access — only administrators see the Administration section.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -584,19 +598,17 @@
       <h4>Summary</h4>
       <p>The Edit Profile screen provides a straightforward form for updating personal details and profile photo. The security section gives quick access to password management.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
 <div class="page-break"></div>
 
-<!-- 16. Company Settings (MISSING) -->
+<!-- 16. Company Settings -->
 <div class="section" id="company">
   <div class="section-header"><h3><span class="section-num">16.</span> Company Settings</h3></div>
   <div class="section-body">
-    <div class="placeholder">
-      <div class="icon">&#127970;</div>
-      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
-    </div>
+    <div class="screenshot-container"><img src="screenshots/slide_23.png" alt="Company Settings"></div>
     <div class="screen-description">
       <h4>Overview</h4>
       <p>The Company Settings screen allows team administrators to manage organization-level details including company name, sport, league affiliation, home airport, and billing address.</p>
@@ -618,17 +630,15 @@
       <h4>Summary</h4>
       <p>Company Settings manages organization-level information that applies to all users and bookings within the team.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
-<!-- 17. Company Contacts (MISSING) -->
+<!-- 17. Company Contacts -->
 <div class="section" id="contacts">
   <div class="section-header"><h3><span class="section-num">17.</span> Company Contacts</h3></div>
   <div class="section-body">
-    <div class="placeholder">
-      <div class="icon">&#128100;</div>
-      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
-    </div>
+    <div class="screenshot-container"><img src="screenshots/slide_24.png" alt="Company Contacts"></div>
     <div class="screen-description">
       <h4>Overview</h4>
       <p>The Company Contacts screen manages key organizational contacts that brokers can reach for coordination. Contacts include travel coordinators, team managers, and other stakeholders.</p>
@@ -648,17 +658,15 @@
       <h4>Summary</h4>
       <p>Company Contacts maintains the list of people brokers should contact for charter coordination, ensuring smooth communication between all parties.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
-<!-- 18. Personnel (MISSING) -->
+<!-- 18. Personnel -->
 <div class="section" id="personnel">
   <div class="section-header"><h3><span class="section-num">18.</span> Authorized Personnel</h3></div>
   <div class="section-body">
-    <div class="placeholder">
-      <div class="icon">&#128101;</div>
-      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
-    </div>
+    <div class="screenshot-container"><img src="screenshots/slide_25.png" alt="Authorized Personnel"></div>
     <div class="screen-description">
       <h4>Overview</h4>
       <p>The Authorized Personnel screen manages individuals who are authorized to approve charter requests or make bookings on behalf of the organization.</p>
@@ -680,17 +688,15 @@
       <h4>Summary</h4>
       <p>Authorized Personnel controls who within the organization can approve quotes and confirm bookings, ensuring proper governance over charter spending.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
-<!-- 19. Admin (MISSING) -->
+<!-- 19. Admin -->
 <div class="section" id="admin">
   <div class="section-header"><h3><span class="section-num">19.</span> Admin — User Management</h3></div>
   <div class="section-body">
-    <div class="placeholder">
-      <div class="icon">&#128272;</div>
-      <p><strong>Screenshot Pending</strong><br>This screen needs to be captured from the running application.</p>
-    </div>
+    <div class="screenshot-container"><img src="screenshots/slide_26.png" alt="Admin - User Management"></div>
     <div class="screen-description">
       <h4>Overview</h4>
       <p>The Admin screen is only visible to users with the "team_admin" role. It provides user management capabilities including adding, editing, and deactivating team members.</p>
@@ -712,6 +718,7 @@
       <h4>Summary</h4>
       <p>The Admin panel gives team administrators full control over their organization's users, roles, and access levels within the Sports Media Charter platform.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -745,6 +752,7 @@
       <h4>Summary</h4>
       <p>The Notification Preferences screen gives users granular control over their alert experience. Seven toggle categories cover all notification types, with marketing opt-out by default.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -780,6 +788,7 @@
       <h4>Summary</h4>
       <p>The Security &amp; Privacy screen consolidates all security controls: authentication methods, session management, privacy tools (data export, account deletion), and security contact information.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -812,6 +821,7 @@
       <h4>Summary</h4>
       <p>The Billing &amp; Payments screen is the financial hub of the app. It shows outstanding balances, manages payment methods, displays billing details, and lists all invoices with their payment status.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -845,6 +855,7 @@
       <h4>Summary</h4>
       <p>The Help &amp; Support screen provides multiple avenues for assistance — phone, email, live chat, FAQ, and feedback — plus direct links to all legal disclosures and the User Guide.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -886,6 +897,7 @@
       <h4>Summary</h4>
       <p>The Terms of Service is a comprehensive legal document presented in an accessible expandable-section format. It covers all aspects of using the charter platform including booking terms, liability, and dispute resolution.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -927,6 +939,7 @@
       <h4>Summary</h4>
       <p>The Privacy Policy provides full transparency on data handling practices. It includes GDPR-aligned features like data download, account deletion with a cooling-off period, and explicit data retention policies.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
@@ -966,6 +979,7 @@
       <h4>Summary</h4>
       <p>The User Guide is a complete in-app reference covering every feature. Its expandable section design makes it easy to find specific topics without scrolling through the entire document.</p>
     </div>
+    <div class="back-to-toc"><a href="#toc">↑ Back to Table of Contents</a></div>
   </div>
 </div>
 
